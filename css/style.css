@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
+
+body{
+	font-family: 'Raleway', sans-serif;
+	font-size: 17px;
+	font-weight: 300;
+	line-height: 27px;
+	color: #262626;
+}
+
+h1 {
+	font-size: 90px;
+	font-weight: 700;
+	line-height: 1;
+}
+
+h2 {
+	font-size: 60px;
+	line-height: 0.9;
+	font-weight: 900;
+	margin: 0;
+}
+
+h3 {
+	font-size: 40px;
+	line-height: 1;
+	font-weight: 700;
+	margin: 0;
+}
+
+/*h1, h2, h3, p {
+	margin: 0;
+}*/
+
+/* Layout */
+.ba-container{
+	padding-left: 15px;
+	padding-right: 15px;
+	max-width: 1200px;
+}
+
+/*Buttons*/
+.ba-button	{
+	display: inline-block;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+	font-size: 20px;
+	line-height: 54px;
+	color: #fff;
+	background-color: #ff6033;
+	border: 2px solid transparent;
+	box-shadow: 0 0 5px rgba(0,0,2,0.5);
+	min-width: 200px;
+	padding: 0 15px;
+}
+
+.ba-button:hover {
+	color: #ff6033;
+	background-color: #fff;
+	border: 2px solid #ff6033;
+}
+
+.ba-button--blue {
+	background-color: #5585a2;
+}
+
+.ba-button--blue:hover {
+	color: #5585a2;
+	background-color: #fff;
+	border: 2px solid #5585a2;
+}
+
+.ba-button--green {
+	background-color: #96b92c;
+}
+
+.ba-button--green:hover {
+	color: #96b92c;
+	background-color: #fff;
+	border: 2px solid #96b92c;
+}
+
+
+/*Header*/
+.ba-header {
+	background: #f9f8fb url(../img/bg-header.jpg) 100% 100% no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+	min-height: 100vh;
+	position: relative;
+}
+
+.ba-header__top {
+	padding-top: 50px;
+}
+
+.ba-header__nav {
+	float: right;
+}
+
+.ba-header__menu {
+	padding-left: 0;
+	list-style: none;
+	margin: 10px auto;
+
+}
+
+.ba-header__menu-item {
+	float: left;
+	margin-left: 38px;
+}
+
+.ba-header__menu-item:fisrt-child {
+	margin-left: 0;
+}
+
+.ba-header__link {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #262626;
+	font-size: 16px;
+	line-height: 25px;
+	font-weight: 700;
+	padding: 6px 0;
+	border-top: 2px solid transparent;
+	}
+
+.ba-header__link--active {
+	border-top: 2px solid #ff6033;
+}
+
+.ba-header__link:hover {
+	border-top: 2px solid #ff6033;
+}
+
+.ba-header__info {
+	max-width: 400px;
+	padding: 250px 0 400px;
+}
+
+.ba-header__info-text {
+	margin: 0;
+	padding: 20px 0 25px;
+}
+
+.ba-header__scroll {
+	display: block;
+	position: absolute;
+	bottom: 60px;
+	left: 50%;
+	margin-left: -12px;
+}
+
+.ba-header__scroll:hover {
+	opacity: 0.7;
+}
+
+/*About us*/
+.ba-about {
+	background-color: #00c4c4;
+	}
+
+.ba-about__info {
+	max-width: 43%;
+	color: #fff;
+	float: right;
+	padding: 170px 0 220px;
+	}
+
+.ba-about__title {
+	margin: 0 auto;
+	padding-bottom: 17px;
+}
+
+.ba-about__text {
+	padding-bottom: 7px;
+	margin: 0 auto;
+}
+.ba-about__image {
+	display: inline-block;
+	float: left;
+	margin-left: -50px;
+	padding: 35px 0 21px;
+}
+
+/*Services*/
+.ba-services {
+	background-color: #70bfff;
+	min-height: 500px;
+}
+
+.ba-services__menu {
+	display: inline-block;
+	float: left;
+	width: 50%;
+	padding: 180px 0 130px 100px;
+}
+
+.ba-services__button {
+	display: inline-block;
+	text-decoration: none;
+	line-height: 96px;
+	min-width: 400px;
+	font-size: 20px;
+	font-weight: 700;
+	color: #262626;
+	background-color: #fff;
+	border: 2px solid transparent;
+	box-shadow: 0 0 5px rgba(0,0,2,0.5);
+	position: relative;
+	margin-bottom: 20px;
+	}
+
+.ba-services__button:after {
+	display: block;
+	content: '';
+	position: absolute;
+	width: 1px;
+	height: 100px;
+	background-color: #9d9d9d;
+	top: 0;
+	right: 25%;
+}
+
+.ba-services__button:hover {
+	opacity: 0.7;
+}
+
+.ba-services__button-text {
+	display: inline-block;
+	width: 75%;
+	text-align: center;
+	line-height: 27px;
+	vertical-align: middle;
+}
+
+.ba-services__button-icon {
+	display: block;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 26px;
+	}
+
+.ba-services__title {
+	display: inline-block;
+	float: right;
+	width: 50%;
+	position: relative;
+	padding: 100px 0 165px;
+}
+
+.ba-services__name {
+	display: block;
+	position: absolute;
+	top: 41%;
+	right: 0;
+	color: #fff;
+	margin: 0;
+}
+
+.ba-services__image {
+	float: right;
+}
+
+/*Gallery*/
+.ba-gallery {
+	background-color: #ffe92f;
+	padding-bottom: 115px;
+}
+
+.ba-gallery__title {
+	margin: 100px auto 30px;
+}
+
+.ba-gallery__info {
+	max-width: 54%;
+	margin: 0 auto;
+}
+
+.ba-gallery__link:hover {
+	opacity: 0.7;
+}
+
+/*Subscribe*/
+.ba-subscribe {
+	background: #fff url(../img/bg-subscribe.jpg) center center no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+	}
+
+.ba-subscribe__title {
+	padding-top: 140px;
+	}
+
+.ba-subscribe__text {
+	max-width: 45%;
+	padding: 30px 0;
+	margin: 0;
+}
+.ba-subscribe__form {
+	padding-bottom: 163px;
+	display: flex;
+	justify-content: baseline;
+}
+.ba-subscribe__email {
+	min-width: 570px;
+	border: 1px solid #262626;
+	line-height: 53px;
+	padding-left: 15px;
+	font-family: "Raleway", sans-serif;
+	font-size: 15px;
+	font-weight: 300;
+	margin-right: 30px;
+}
+
+
+/* Typography */
+a,
+input[type="submit"],
+input[type="button"],
+button{
+	-webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	-moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+input[type="submit"],
+input[type="button"],
+button,
+.ba-button{
+	display: inline-block;
+}
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover,
+.ba-button:hover{
+
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+
+	-webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	-moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+
+}
+textarea {
+
+}
