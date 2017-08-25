@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
 
 body{
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Raleway', Arial, sans-serif;
 	font-size: 17px;
 	font-weight: 300;
 	line-height: 27px;
@@ -16,7 +16,7 @@ h1 {
 
 h2 {
 	font-size: 60px;
-	line-height: 0.9;
+	line-height: 1;
 	font-weight: 900;
 	margin: 0;
 }
@@ -28,9 +28,10 @@ h3 {
 	margin: 0;
 }
 
-/*h1, h2, h3, p {
+p {
 	margin: 0;
-}*/
+}
+
 
 /* Layout */
 .ba-container{
@@ -51,7 +52,7 @@ h3 {
 	background-color: #ff6033;
 	border: 2px solid transparent;
 	box-shadow: 0 0 5px rgba(0,0,2,0.5);
-	min-width: 200px;
+	width: 200px;
 	padding: 0 15px;
 }
 
@@ -73,7 +74,8 @@ h3 {
 
 .ba-button--green {
 	background-color: #96b92c;
-}
+	width: 170px;
+	}
 
 .ba-button--green:hover {
 	color: #96b92c;
@@ -81,18 +83,32 @@ h3 {
 	border: 2px solid #96b92c;
 }
 
+.ba-button--red {
+	background-color: #f72b3b;
+}
+
+.ba-button--red:hover {
+	color: #f72b3b;
+	background-color: #fff;
+	border: 2px solid #f72b3b;
+}
 
 /*Header*/
 .ba-header {
-	background: #f9f8fb url(../img/bg-header.jpg) 100% 100% no-repeat;
-	-webkit-background-size: cover;
-	background-size: cover;
-	min-height: 100vh;
+	background: #f9f8fb url(../img/bg-header.jpg) center no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+	min-height: 1000px;
 	position: relative;
+	padding-bottom: 120px;
 }
 
 .ba-header__top {
 	padding-top: 50px;
+}
+
+.ba-header__logo:hover {
+	opacity: 0.7;
 }
 
 .ba-header__nav {
@@ -103,7 +119,6 @@ h3 {
 	padding-left: 0;
 	list-style: none;
 	margin: 10px auto;
-
 }
 
 .ba-header__menu-item {
@@ -136,7 +151,9 @@ h3 {
 
 .ba-header__info {
 	max-width: 400px;
-	padding: 250px 0 400px;
+	position: absolute;
+	top: 48%;
+	transform: translateY(-50%);
 }
 
 .ba-header__info-text {
@@ -187,8 +204,7 @@ h3 {
 /*Services*/
 .ba-services {
 	background-color: #70bfff;
-	min-height: 500px;
-}
+	}
 
 .ba-services__menu {
 	display: inline-block;
@@ -267,20 +283,43 @@ h3 {
 /*Gallery*/
 .ba-gallery {
 	background-color: #ffe92f;
-	padding-bottom: 115px;
-}
+	}
 
 .ba-gallery__title {
-	margin: 100px auto 30px;
+	margin: 90px auto 0;
 }
 
 .ba-gallery__info {
-	max-width: 54%;
-	margin: 0 auto;
+	max-width: 52%;
+	margin: 28px auto 30px;
 }
 
-.ba-gallery__link:hover {
+.ba-gallery__items .ba-gallery__item {
+	padding: 0 0 30px 30px;
+}
+
+.ba-gallery__item {
+	overflow: hidden;
+}
+
+.ba-gallery__link {
+	min-width: 100%;
+	min-height: 100%;
+	}
+
+.ba-gallery__link:hover img {
+	transform: scale(1.2);
 	opacity: 0.7;
+}
+
+.ba-gallery__image {
+	-webkit-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.5);
+	box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.5);
+}
+
+.ba-gallery__button {
+	padding: 40px 0 115px;
 }
 
 /*Subscribe*/
@@ -291,12 +330,12 @@ h3 {
 	}
 
 .ba-subscribe__title {
-	padding-top: 140px;
+	margin-top: 140px;
 	}
 
 .ba-subscribe__text {
-	max-width: 45%;
-	padding: 30px 0;
+	max-width: 50%;
+	padding: 25px 0;
 	margin: 0;
 }
 .ba-subscribe__form {
@@ -315,6 +354,264 @@ h3 {
 	margin-right: 30px;
 }
 
+/*Blog*/
+.ba-blog {
+	background-color: #b07cf7;
+	color: #fff;
+	}
+
+.ba-blog__title {
+	margin: 90px 0 25px;
+}
+
+.ba-blog__text {
+	max-width: 50%;
+	margin: 0 auto;
+	padding-bottom: 20px;
+}
+
+
+.ba-blog__link {
+	display: block;
+	width: 100%;
+	height: 310px;
+
+	overflow: hidden;
+	position: relative;
+
+	-webkit-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.5);
+	box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.5);
+}
+
+.ba-blog__link:hover {
+	opacity: 0.7;
+}
+
+
+.ba-blog__image {
+	display: block;
+	position: absolute;
+	min-width: 100%;
+	min-height: 100%;
+	bottom: 0;
+
+}
+
+.ba-blog__item-date {
+	position: absolute;
+	top: 30px;
+	left: 30px;
+	width: 60px;
+	height: 60px;
+	border-radius: 3px;
+	background-color: rgba(76, 83, 91, 0.7);
+	
+	line-height: auto;
+	text-transform: uppercase;
+	color: #fff;
+	text-align: center;
+}
+
+.item-date__day {
+	font-size: 32px;
+	font-weight: 700;
+	margin: 0;
+}
+
+.item-date__month {
+	font-size: 21px;
+	font-weight: 900;
+	margin: 0;
+}
+
+.ba-blog__item-info {
+	position: absolute;
+	max-width: 310px;
+	max-height: 80px;
+	left: 20px;
+	bottom: 25px;
+	color: #fff;
+	line-height: auto;
+}
+
+.ba-blog__item-title {
+	font-size: 20px;
+	font-weight: 700;
+	margin: 0;
+}
+
+.ba-blog__item-update {
+	font-size: 13px;
+	font-weight: 300;
+	margin: 0;
+}
+
+.ba-blog__gradient {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+51,000000+51,000000+100&0.65+0,0+0,0+48,0.65+100,0.65+100 */
+background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 48%, rgba(0,0,0,0.04) 51%, rgba(0,0,0,0.65) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 48%,rgba(0,0,0,0.04) 51%,rgba(0,0,0,0.65) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 48%,rgba(0,0,0,0.04) 51%,rgba(0,0,0,0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
+}
+
+.ba-blog__button {
+	padding: 25px 0 115px;
+}
+
+/*Contact*/
+.ba-contact {
+	background: #88b4cc url(../img/bg-contact.jpg);
+	-webkit-background-size: cover;
+	background-size: cover;
+	/*min-height: 860px;*/
+}
+
+.ba-contact__title {
+	margin: 90px 0 35px;
+}
+.ba-contact__text {
+	max-width: 30%;
+	margin: 0 auto;
+	padding-bottom: 15px;
+}
+
+.ba-contact__field {
+	padding-bottom: 100px;
+}
+
+.ba-contact__form {
+	width: 500px;
+	height: 50px;
+	background-color: rgba(0, 196, 196, 0.5);
+	padding: 20px;
+	font-family: 'Raleway', Arial, sans-serif;
+	font-size: 15px;
+	font-weight: 300;
+	color: #fff;
+	margin-bottom: 15px;
+	outline: none;
+	border: 1px solid transparent;
+	position: relative;
+}
+
+.ba-contact__form::-webkit-input-placeholder {
+	font-family: 'Raleway', Arial, sans-serif;
+	color: #fff;
+	font-size: 15px;
+	font-weight: 300;}
+
+.ba-contact__form::-moz-placeholder  { 
+	font-family: 'Raleway', Arial, sans-serif;       
+	color: #fff;
+	font-size: 15px;
+	font-weight: 300;}
+
+.ba-contact__form:-moz-placeholder {  
+	font-family: 'Raleway', Arial, sans-serif;      
+	color: #fff;
+	font-size: 15px;
+	font-weight: 300;}
+
+.ba-contact__form:-ms-input-placeholder { 
+	font-family: 'Raleway', Arial, sans-serif;       
+	color: #fff;
+	font-size: 15px;
+	font-weight: 300;}
+
+
+.ba-contact__form:focus {
+	background-color: #00c4c4;
+	border-left: 5px solid #355b82;
+}
+
+.ba-contact__form--big {
+	min-height: 250px;
+	resize: none;
+}
+
+.ba-contact__form--active {
+	background-color: #00c4c4;
+	border-left: 5px solid #355b82;
+	font-weight: 700;
+}
+
+.ba-contact__form--active::-webkit-input-placeholder {
+	font-family: 'Raleway', Arial, sans-serif;
+	color: #fff;
+	font-size: 15px;
+	font-weight: 700;}
+
+.ba-contact__form--active::-moz-placeholder {
+	font-family: 'Raleway', Arial, sans-serif;
+	color: #fff;
+	font-size: 15px;
+	font-weight: 700;}
+
+.ba-contact__form--active:-moz-placeholder {
+	font-family: 'Raleway', Arial, sans-serif;
+	color: #fff;
+	font-size: 15px;
+	font-weight: 700;}
+
+
+.ba-contact__item {
+	font-size: 17px;
+	font-weight: 700;
+	margin: 0;
+	line-height: auto;
+	text-transform: uppercase;
+	padding-left: 75px;
+
+}
+
+.ba-contact__item-info {
+	font-size: 20px;
+	font-weight: 300;
+	margin: 0;
+	padding-left: 75px;
+	padding-bottom: 8px;
+}
+
+
+/*Footer*/
+.ba-footer {
+	background-color: #262626;
+}
+
+.ba-footer__flex {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-content: center;
+	}
+
+.ba-footer__info {
+	font-size: 16px;
+	line-height: 90px;
+	font-weight: 300;
+	color: #b9b9b9;
+}
+
+.ba-footer__info span {
+	color: #ff2b58;
+	font-weight: 700;
+}
+
+.ba-footer__link {
+	line-height: 30px;
+	cursor: pointer;
+}
+
+.ba-footer__link:hover {
+	opacity: 0.7;
+}
 
 /* Typography */
 a,
